@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            var i = "1";
+            var counter = "1";
+            function randomauk(){
+             document.getElementById(i).innerHTML=" ";
+            var suvaNr=Math.floor(Math.random()*9)+1; document.getElementById(suvaNr).innerHTML="<img src='https://storage.pixteller.com/designs/designs-images/2018-04-20/02/mole-background-1-5ada0006b4ef1.png'/>";
+      i = suvaNr;
+      document.getElementById(i).onclick = function(){
+      
+      if ((document.getElementById(suvaNr).id)==i){
+          //alert("t");
+          document.getElementById("score").innerHTML=counter++;
+          clearTimeout(endex);
+          randomauk();
+      } else {
+          //alert(document.getElementById(suvaNr).id);
+      }
+      }
+      
+      var endex = setTimeout(randomauk, 800);
+            }
+        </script>
+        <title>Page Title</title>
+    </head>
+    <body onload="randomauk();"
+        <div>
+        <table>
+            <tr>
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+            </tr>
+            <tr>
+                <td id="4"></td>
+                <td id="5"></td>
+                <td id="6"></td>
+            </tr>
+            <tr>
+                <td id="7"></td>
+                <td id="8"></td>
+                <td id="9"></td>
+            </tr>
+            </table>
+        </div>
+        <div>
+            <p>your score is: </p>
+            <p id="score"></p>
+        </div>
+    </body>
+</html>
